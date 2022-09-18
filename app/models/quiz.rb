@@ -9,7 +9,5 @@
 #  updated_at  :datetime         not null
 #
 class Quiz < ApplicationRecord
-
-    validates :title, presence: true
-    
+  validates :title, presence: true
 end

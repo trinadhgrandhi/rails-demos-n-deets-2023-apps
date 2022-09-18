@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
   root to: redirect('/quizzes')
 
   get 'quizzes', to: 'quizzes#index', as: 'quizzes'
@@ -13,5 +12,4 @@ Rails.application.routes.draw do
   patch 'quizzes/:id', to: 'quizzes#update'
   delete 'quizzes/:id', to: 'quizzes#destroy'
   get 'quizzes/:id/edit', to: 'quizzes#edit', as: 'edit_quiz'
-
 end

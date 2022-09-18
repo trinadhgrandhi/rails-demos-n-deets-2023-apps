@@ -71,16 +71,17 @@ group :test do
   gem "webdrivers"
 end
 
-# Disconnects all connections to PostgreSQL db when running rails db:reset
-gem 'pgreset'
+group :development, :test do
+  # Disconnects all connections to PostgreSQL db when running rails db:reset
+  gem 'pgreset'
 
-# Automatically adds comments to each model class file, listing the model’s attributes and their types
-group :development do
+  # Adds model attributes/routes to top of model files/routes file
   gem 'annotate'
 end
 
-gem 'bootstrap', '~> 5.1.3'
-gem "bootswatch", github: "thomaspark/bootswatch"
+# Preset CSS styles and themes
+gem 'bootstrap', '~> 5.2.0'
+gem 'bootswatch', github: 'thomaspark/bootswatch'
 
-# Replaces Rails form helpers with bootstrap-specific form helpers
-gem "bootstrap_form", "~> 4.0"
+# Bootstrap styled forms
+gem 'bootstrap_form', '~> 5.1'
