@@ -14,9 +14,9 @@
       <tr>
         <td><%= question.question %></td>
         <td class="text-nowrap">
-            <%= link_to 'show', quiz_question_path(@quiz, question), class: 'btn btn-sm btn-outline-secondary' %>
-            <%= link_to 'edit', edit_quiz_question_path(@quiz, question), class: 'btn btn-sm btn-outline-secondary' %>
-            <%= button_to 'destroy', quiz_question_path(@quiz, question), method: :delete, data: { turbo: false }, class: 'btn btn-sm btn-outline-secondary' %>
+          <%= link_to 'show', quiz_question_path(@quiz, question), class: 'btn btn-sm btn-outline-secondary' %>
+          <%= link_to 'edit', edit_quiz_question_path(@quiz, question), class: 'btn btn-sm btn-outline-secondary' %>
+          <%= button_to 'destroy', quiz_question_path(@quiz, question), method: :delete, data: { turbo: false }, class: 'btn btn-sm btn-outline-secondary', form: { class: 'd-inline' } %>
         </td>
       </tr>
     <% end %>
