@@ -1,14 +1,21 @@
 module ApplicationHelper
+  def active_class(path)
+    if request.path == path
+      'active'
+    else
+      ''
+    end
+  end
 
-    def flash_class(level)
-        bootstrap_alert_class = {
-          "success" => "alert-success",
-          "error" => "alert-danger",
-          "notice" => "alert-info",
-          "alert" => "alert-danger",
-          "warn" => "alert-warning"
-        }
-        bootstrap_alert_class[level]
-      end
+  BOOTSTRAP_ALERT_CLASS = {
+    'success' => 'alert-success',
+    'error'   => 'alert-danger',
+    'notice'  => 'alert-info',
+    'alert'   => 'alert-danger',
+    'warn'    => 'alert-warning'
+  }.freeze
 
+  def flash_class(level)
+    BOOTSTRAP_ALERT_CLASS[level]
+  end
 end
